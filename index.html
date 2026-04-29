@@ -426,6 +426,7 @@
     .galeri-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
     .galeri-item:first-child { grid-column: span 2; grid-row: span 1; height: 200px; }
     .peta-info { grid-template-columns: 1fr; }
+    #profil .container > div:last-child { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -441,7 +442,6 @@
     <li><a href="#profil">Profil</a></li>
     <li><a href="#berita">Berita</a></li>
     <li><a href="#galeri">Galeri</a></li>
-    <li><a href="#layanan">Layanan</a></li>
     <li><a href="#peta">Peta</a></li>
     <li><a href="#kontak" class="nav-cta">Hubungi Kami</a></li>
   </ul>
@@ -455,25 +455,7 @@
     <p class="hero-desc">Desa Cremo — tempat di mana tradisi bertemu kemajuan, alam terjaga, dan masyarakat berdaya. Bersama kita membangun desa yang lebih baik.</p>
     <div class="hero-buttons">
       <a href="#profil" class="btn-primary">Kenali Desa Kami</a>
-      <a href="#layanan" class="btn-outline">Lihat Layanan</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">2.450</div>
-        <div class="stat-label">Penduduk</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">620</div>
-        <div class="stat-label">Kepala Keluarga</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">4</div>
-        <div class="stat-label">Dusun</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">12</div>
-        <div class="stat-label">RT/RW</div>
-      </div>
+      <a href="#kontak" class="btn-outline">Hubungi Kami</a>
     </div>
   </div>
 </section>
@@ -481,48 +463,95 @@
 <!-- PROFIL DESA -->
 <section id="profil">
   <div class="container">
-    <div class="profil-grid">
-      <div class="profil-img-wrap">
-        <img src="https://images.unsplash.com/photo-1598449356475-b9f71db7d847?w=800&q=80" alt="Desa Cremo" onerror="this.style.display='none'">
-        <div class="profil-badge-overlay">
-          <p>Berdiri sejak</p>
-          <strong>Tahun 1945</strong>
+
+    <!-- Header profil -->
+    <div class="text-center" style="margin-bottom:3rem;">
+      <p class="section-label">Tentang Kami</p>
+      <h2 class="section-title">Profil Desa Cremo</h2>
+      <p class="section-desc">Mengenal lebih dekat Desa Cremo — sejarah, potensi, dan harapan kami untuk masa depan yang lebih baik.</p>
+    </div>
+
+    <!-- Info card ringkasan -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:3rem;">
+      <div style="background:var(--hijau-terang); border-radius:var(--border-radius-lg); padding:1.25rem; text-align:center;">
+        <div style="font-size:1.6rem; margin-bottom:6px;">📍</div>
+        <div style="font-size:0.7rem; color:var(--hijau); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Kecamatan</div>
+        <div style="font-weight:600; font-size:0.95rem; color:var(--teks); margin-top:4px;">Gedang Sari</div>
+      </div>
+      <div style="background:var(--hijau-terang); border-radius:var(--border-radius-lg); padding:1.25rem; text-align:center;">
+        <div style="font-size:1.6rem; margin-bottom:6px;">🏛️</div>
+        <div style="font-size:0.7rem; color:var(--hijau); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Kabupaten</div>
+        <div style="font-weight:600; font-size:0.95rem; color:var(--teks); margin-top:4px;">Gunung Kidul</div>
+      </div>
+      <div style="background:var(--hijau-terang); border-radius:var(--border-radius-lg); padding:1.25rem; text-align:center;">
+        <div style="font-size:1.6rem; margin-bottom:6px;">🗺️</div>
+        <div style="font-size:0.7rem; color:var(--hijau); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Provinsi</div>
+        <div style="font-weight:600; font-size:0.95rem; color:var(--teks); margin-top:4px;">D.I. Yogyakarta</div>
+      </div>
+      <div style="background:var(--hijau-terang); border-radius:var(--border-radius-lg); padding:1.25rem; text-align:center;">
+        <div style="font-size:1.6rem; margin-bottom:6px;">🏘️</div>
+        <div style="font-size:0.7rem; color:var(--hijau); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Wilayah RT/RW</div>
+        <div style="font-weight:600; font-size:0.95rem; color:var(--teks); margin-top:4px;">5 RT · 1 RW</div>
+      </div>
+      <div style="background:var(--hijau-terang); border-radius:var(--border-radius-lg); padding:1.25rem; text-align:center;">
+        <div style="font-size:1.6rem; margin-bottom:6px;">⛰️</div>
+        <div style="font-size:0.7rem; color:var(--hijau); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Topografi</div>
+        <div style="font-weight:600; font-size:0.95rem; color:var(--teks); margin-top:4px;">Perbukitan Karst</div>
+      </div>
+      <div style="background:var(--hijau-terang); border-radius:var(--border-radius-lg); padding:1.25rem; text-align:center;">
+        <div style="font-size:1.6rem; margin-bottom:6px;">🌾</div>
+        <div style="font-size:0.7rem; color:var(--hijau); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Mata Pencaharian</div>
+        <div style="font-weight:600; font-size:0.95rem; color:var(--teks); margin-top:4px;">Pertanian & UMKM</div>
+      </div>
+    </div>
+
+    <!-- Konten paragraf profil -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start;">
+
+      <!-- Kolom kiri: gambar + sejarah -->
+      <div>
+        <div class="profil-img-wrap" style="margin-bottom:1.75rem;">
+          <img src="https://images.unsplash.com/photo-1598449356475-b9f71db7d847?w=800&q=80" alt="Desa Cremo" onerror="this.style.display='none'">
+          <div class="profil-badge-overlay">
+            <p>Bagian dari Kec.</p>
+            <strong>Gedang Sari, GK</strong>
+          </div>
+        </div>
+
+        <!-- Sejarah singkat -->
+        <div style="background:var(--abu); border-radius:var(--border-radius-lg); padding:1.5rem; border-left:4px solid var(--hijau);">
+          <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.75rem; color:var(--hijau);">📜 Sejarah Singkat</h3>
+          <p style="font-size:0.875rem; line-height:1.8; color:var(--teks-abu);">Desa Cremo merupakan salah satu desa yang telah berdiri sejak masa awal kemerdekaan Republik Indonesia. Nama "Cremo" diyakini berasal dari kosakata lokal yang merujuk pada karakter tanah dan lahan di wilayah ini. Seiring berjalannya waktu, desa ini terus berkembang di bawah kepemimpinan para kepala desa yang berdedikasi, dan kini telah menjadi bagian yang tak terpisahkan dari kehidupan masyarakat Kecamatan Gedang Sari, Kabupaten Gunung Kidul.</p>
         </div>
       </div>
-      <div>
-        <p class="section-label">Tentang Kami</p>
-        <h2 class="section-title">Profil Desa Cremo</h2>
-        <p class="section-desc">Desa Cremo terletak di wilayah yang subur dengan pemandangan alam yang indah. Kami berkomitmen untuk terus meningkatkan kesejahteraan masyarakat melalui program-program yang tepat sasaran.</p>
-        <div style="margin-top: 2rem;">
-          <div class="profil-item">
-            <div class="profil-icon">📍</div>
-            <div>
-              <h4>Lokasi</h4>
-              <p>Kecamatan —, Kabupaten —, Provinsi Jawa Barat</p>
-            </div>
-          </div>
-          <div class="profil-item">
-            <div class="profil-icon">👤</div>
-            <div>
-              <h4>Kepala Desa</h4>
-              <p>Nama Kepala Desa — Masa Jabatan 2021–2027</p>
-            </div>
-          </div>
-          <div class="profil-item">
-            <div class="profil-icon">🌾</div>
-            <div>
-              <h4>Potensi Utama</h4>
-              <p>Pertanian, perkebunan, dan kerajinan tangan lokal</p>
-            </div>
-          </div>
-          <div class="profil-item">
-            <div class="profil-icon">📐</div>
-            <div>
-              <h4>Luas Wilayah</h4>
-              <p>±850 Hektar — terdiri dari sawah, kebun, dan permukiman</p>
-            </div>
-          </div>
+
+      <!-- Kolom kanan: paragraf isi profil -->
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+
+        <!-- Gambaran umum -->
+        <div>
+          <h3 style="font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:0.6rem; color:var(--teks);">Gambaran Umum</h3>
+          <p style="font-size:0.9rem; line-height:1.85; color:var(--teks-abu);">Desa Cremo adalah sebuah desa yang terletak di Kecamatan Gedang Sari, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta. Desa ini terdiri dari <strong>5 Rukun Tetangga (RT)</strong> dan <strong>1 Rukun Warga (RW)</strong> yang mencerminkan komunitas yang solid dan guyub rukun. Kehidupan masyarakatnya masih sangat kental dengan nilai-nilai kebersamaan, gotong royong, dan kearifan lokal yang terus dijaga dari generasi ke generasi.</p>
         </div>
+
+        <!-- Kondisi geografis -->
+        <div>
+          <h3 style="font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:0.6rem; color:var(--teks);">Kondisi Geografis</h3>
+          <p style="font-size:0.9rem; line-height:1.85; color:var(--teks-abu);">Secara geografis, Desa Cremo berada di kawasan perbukitan karst yang menjadi ciri khas wilayah Gunung Kidul. Kondisi lahan yang berbukit dengan tanah berbatu kapur menjadikan desa ini memiliki pemandangan alam yang khas dan memesona. Meski demikian, masyarakat telah berhasil mengoptimalkan potensi alam ini untuk kebutuhan pertanian dan kehidupan sehari-hari melalui kearifan dan ketekunan yang diwariskan turun-temurun.</p>
+        </div>
+
+        <!-- Mata pencaharian -->
+        <div>
+          <h3 style="font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:0.6rem; color:var(--teks);">Mata Pencaharian Masyarakat</h3>
+          <p style="font-size:0.9rem; line-height:1.85; color:var(--teks-abu);">Sebagian besar warga Desa Cremo bermata pencaharian sebagai petani dan buruh tani, memanfaatkan lahan untuk menanam palawija, singkong, jagung, dan berbagai tanaman hortikultura yang cocok dengan kondisi tanah setempat. Selain bertani, sebagian warga juga aktif menggeluti usaha mikro, kecil, dan menengah (UMKM) berbasis kerajinan dan pengolahan hasil bumi, serta berprofesi sebagai pedagang dan perantau di kota-kota besar.</p>
+        </div>
+
+        <!-- Potensi desa -->
+        <div style="background:var(--hijau); border-radius:var(--border-radius-lg); padding:1.5rem;">
+          <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.75rem; color:var(--emas);">🌟 Potensi & Visi Desa</h3>
+          <p style="font-size:0.875rem; line-height:1.85; color:rgba(255,255,255,0.88);">Desa Cremo menyimpan potensi yang beragam, mulai dari keindahan alam perbukitan karst yang berpeluang dikembangkan sebagai destinasi wisata alam, hingga hasil pertanian dan produk UMKM lokal yang terus tumbuh. Dengan semangat kebersamaan yang tinggi, Pemerintah Desa Cremo berkomitmen untuk mewujudkan desa yang <strong style="color:var(--emas);">mandiri, sejahtera, dan berdaya saing</strong> — melalui penguatan sumber daya manusia, pengembangan potensi lokal, dan peningkatan kualitas pelayanan publik bagi seluruh lapisan masyarakat.</p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -573,54 +602,7 @@
   </div>
 </section>
 
-<!-- LAYANAN -->
-<section id="layanan">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">Pelayanan Publik</p>
-      <h2 class="section-title">Layanan Desa</h2>
-      <p class="section-desc">Kami hadir untuk memudahkan urusan administrasi dan kebutuhan masyarakat.</p>
-    </div>
-    <div class="layanan-grid">
-      <div class="layanan-card">
-        <div class="layanan-icon"><span>📄</span></div>
-        <div class="layanan-title">Surat Keterangan</div>
-        <div class="layanan-desc">Penerbitan surat keterangan domisili, usaha, tidak mampu, dan lainnya.</div>
-        <a href="#kontak" class="layanan-link">Ajukan Sekarang →</a>
-      </div>
-      <div class="layanan-card">
-        <div class="layanan-icon"><span>🪪</span></div>
-        <div class="layanan-title">Administrasi KTP/KK</div>
-        <div class="layanan-desc">Pengurusan KTP, Kartu Keluarga, dan dokumen kependudukan lainnya.</div>
-        <a href="#kontak" class="layanan-link">Ajukan Sekarang →</a>
-      </div>
-      <div class="layanan-card">
-        <div class="layanan-icon"><span>👶</span></div>
-        <div class="layanan-title">Akta Kelahiran</div>
-        <div class="layanan-desc">Pengurusan akta kelahiran dan surat rekomendasi untuk kelengkapan berkas.</div>
-        <a href="#kontak" class="layanan-link">Ajukan Sekarang →</a>
-      </div>
-      <div class="layanan-card">
-        <div class="layanan-icon"><span>🏗️</span></div>
-        <div class="layanan-title">IMB / Izin Bangunan</div>
-        <div class="layanan-desc">Pengajuan rekomendasi izin mendirikan bangunan di wilayah desa.</div>
-        <a href="#kontak" class="layanan-link">Ajukan Sekarang →</a>
-      </div>
-      <div class="layanan-card">
-        <div class="layanan-icon"><span>💰</span></div>
-        <div class="layanan-title">Bantuan Sosial</div>
-        <div class="layanan-desc">Informasi dan pendataan penerima program bantuan sosial desa maupun pusat.</div>
-        <a href="#kontak" class="layanan-link">Cek Kelayakan →</a>
-      </div>
-      <div class="layanan-card">
-        <div class="layanan-icon"><span>📊</span></div>
-        <div class="layanan-title">APBDes & Transparansi</div>
-        <div class="layanan-desc">Informasi anggaran dan realisasi belanja desa yang terbuka untuk masyarakat.</div>
-        <a href="#kontak" class="layanan-link">Lihat Data →</a>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- PETA -->
 <section id="peta">
@@ -632,7 +614,7 @@
     </div>
     <div class="peta-wrap">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63538.37!2d107.5!3d-6.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6e251b1e3b1%3A0x6a5f67e143d8ed18!2sJawa%20Barat!5e0!3m2!1sid!2sid!4v1"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0!2d110.6311719!3d-7.8091857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a48c3c1e9304f%3A0xcb3e5512b0f34a6a!2sCremo%2C%20Tegalrejo%2C%20Kec.%20Gedang%20Sari%2C%20Kabupaten%20Gunungkidul%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1"
         allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
       <div class="peta-info">
@@ -640,7 +622,7 @@
           <span class="peta-info-icon">🏛️</span>
           <div>
             <h4>Kantor Desa</h4>
-            <p>Jl. Utama Desa Cremo No. 1</p>
+            <p>Cremo, Tegalrejo, Gedang Sari</p>
           </div>
         </div>
         <div class="peta-info-item">
@@ -666,74 +648,43 @@
 <section id="kontak">
   <div class="container">
     <p class="section-label">Hubungi Kami</p>
-    <h2 class="section-title">Ada Pertanyaan?</h2>
-    <p class="section-desc">Kirimkan pesan atau kunjungi kantor desa kami. Kami siap membantu!</p>
-    <div class="kontak-grid">
-      <div class="kontak-info">
-        <div class="kontak-item">
-          <div class="kontak-icon">📍</div>
-          <div>
-            <h4>Alamat Kantor</h4>
-            <p>Jl. Utama Desa Cremo No. 1, Jawa Barat</p>
-          </div>
-        </div>
-        <div class="kontak-item">
-          <div class="kontak-icon">📞</div>
-          <div>
-            <h4>Telepon</h4>
-            <p>(022) 000-0000</p>
-          </div>
-        </div>
-        <div class="kontak-item">
-          <div class="kontak-icon">✉️</div>
-          <div>
-            <h4>Email</h4>
-            <p>desacremo@mail.desa.id</p>
-          </div>
-        </div>
-        <div class="kontak-item">
-          <div class="kontak-icon">📱</div>
-          <div>
-            <h4>WhatsApp Desa</h4>
-            <p>+62 812-0000-0000</p>
-          </div>
-        </div>
-        <div class="kontak-item">
-          <div class="kontak-icon">🕐</div>
-          <div>
-            <h4>Jam Layanan</h4>
-            <p>Senin – Jumat, 08.00 – 15.00 WIB</p>
-          </div>
+    <h2 class="section-title">Informasi Kontak</h2>
+    <p class="section-desc">Kunjungi kantor desa kami atau hubungi melalui saluran berikut.</p>
+    <div class="kontak-info" style="margin-top:2rem;">
+      <div class="kontak-item">
+        <div class="kontak-icon">📍</div>
+        <div>
+          <h4>Alamat Kantor</h4>
+          <p>Cremo, Tegalrejo, Kec. Gedang Sari, Kab. Gunungkidul, DIY</p>
         </div>
       </div>
-
-      <div class="kontak-form">
-        <h3 style="color:white; font-family:'Playfair Display',serif; margin-bottom:1.25rem;">Kirim Pesan</h3>
-        <div class="form-group">
-          <label>Nama Lengkap</label>
-          <input type="text" id="nama" placeholder="Masukkan nama Anda">
+      <div class="kontak-item">
+        <div class="kontak-icon">📞</div>
+        <div>
+          <h4>Telepon</h4>
+          <p>(022) 000-0000</p>
         </div>
-        <div class="form-group">
-          <label>Nomor WhatsApp</label>
-          <input type="tel" id="nohp" placeholder="08xx-xxxx-xxxx">
+      </div>
+      <div class="kontak-item">
+        <div class="kontak-icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p>desacremo@mail.desa.id</p>
         </div>
-        <div class="form-group">
-          <label>Keperluan</label>
-          <select id="keperluan">
-            <option value="">-- Pilih Keperluan --</option>
-            <option>Informasi Umum</option>
-            <option>Surat Keterangan</option>
-            <option>Administrasi KTP/KK</option>
-            <option>Bantuan Sosial</option>
-            <option>APBDes & Transparansi</option>
-            <option>Lainnya</option>
-          </select>
+      </div>
+      <div class="kontak-item">
+        <div class="kontak-icon">📱</div>
+        <div>
+          <h4>WhatsApp Desa</h4>
+          <p>+62 812-0000-0000</p>
         </div>
-        <div class="form-group">
-          <label>Pesan</label>
-          <textarea id="pesan" placeholder="Tuliskan pesan atau pertanyaan Anda..."></textarea>
+      </div>
+      <div class="kontak-item">
+        <div class="kontak-icon">🕐</div>
+        <div>
+          <h4>Jam Layanan</h4>
+          <p>Senin – Jumat, 08.00 – 15.00 WIB</p>
         </div>
-        <button class="btn-kirim" onclick="kirimPesan()">Kirim Pesan ✉️</button>
       </div>
     </div>
   </div>
